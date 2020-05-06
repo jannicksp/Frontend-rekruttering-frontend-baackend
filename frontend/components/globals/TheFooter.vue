@@ -1,0 +1,19 @@
+<template>
+  <footer>
+    HELLO FROM FOOTER 👞
+  </footer>
+</template>
+
+<script>
+import Logo from '~/components/globals/Logo.vue';
+
+export default {
+  components: {
+    Logo,
+  }
+}
+</script>
+
+<style>
+
+</style>

@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_rows_page_headers",
+  "info": {
+    "name": "Page Header",
+    "icon": "smile-wink"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Content": {
+      "type": "richtext"
+    },
+    "button_text": {
+      "type": "string"
+    }
+  }
+}

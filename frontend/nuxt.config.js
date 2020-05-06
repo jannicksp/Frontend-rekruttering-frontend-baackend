@@ -1,5 +1,17 @@
+import { InMemoryCache, IntrospectionFragmentMatcher } from 'apollo-cache-inmemory';
+
+const fragmentMatcher = new IntrospectionFragmentMatcher({
+  introspectionQueryResultData: {
+    __schema: {
+      types: [], // no types provided
+    },
+  },
+});
+
+const cache = new InMemoryCache({ fragmentMatcher });
+
 export default {
-  mode: "universal",
+  mode: "spa",
   /*
    ** Headers of the page
    */
@@ -57,6 +69,7 @@ export default {
     injected: true
   },
   apollo: {
+    includeNodeModules: true,
     clientConfigs: {
       default: {
         httpEndpoint: process.env.API_URL + "/graphql"

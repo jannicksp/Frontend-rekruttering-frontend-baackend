@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_rows_stacks",
+  "info": {
+    "name": "Stack",
+    "icon": "bolt"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Content": {
+      "type": "richtext"
+    }
+  }
+}
