@@ -1,14 +1,10 @@
-import { InMemoryCache, IntrospectionFragmentMatcher } from 'apollo-cache-inmemory';
+import { InMemoryCache, IntrospectionFragmentMatcher } from 'apollo-cache-inmemory'
+// import { createHttpLink } from "apollo-link-http";
 
-const fragmentMatcher = new IntrospectionFragmentMatcher({
-  introspectionQueryResultData: {
-    __schema: {
-      types: [], // no types provided
-    },
-  },
+/*const httpLink = createHttpLink({
+  uri:  process.env.API_URL + "/graphql",
 });
-
-const cache = new InMemoryCache({ fragmentMatcher });
+const link = ApolloLink.from([httpLink]);*/
 
 export default {
   mode: "spa",
@@ -71,9 +67,8 @@ export default {
   apollo: {
     includeNodeModules: true,
     clientConfigs: {
-      default: {
-        httpEndpoint: process.env.API_URL + "/graphql"
-      }
+      // link,
+      default: '~/apollo/config.js'
     }
   },
   /*
