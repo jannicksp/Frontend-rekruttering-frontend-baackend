@@ -10,8 +10,8 @@ const components = {
   Stack: () => import('@/components/DynamicComponents/Stack'),
   Technology: () => import('@/components/DynamicComponents/Technology'),
   Minitest: () => import('@/components/DynamicComponents/Minitest'),
-  Culture: () => import('@/components/DynamicComponents/Culture'),
-  Jobs: () => import('@/components/DynamicComponents/Jobs')
+  Culture: () => import('@/components/DynamicComponents/Culture')
+  // Jobs: () => import('@/components/DynamicComponents/Jobs')
 }
 export default {
   components,
