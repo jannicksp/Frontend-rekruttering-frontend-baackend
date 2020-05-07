@@ -1,0 +1,59 @@
+/**
+ * Settings: Variables
+ */
+
+:root {
+   /* colors
+  ********************/
+  --color-red: #c80046;
+  --color-berry: #7c0435;
+  --color-plum: #510035;
+  --color-spearmint: #75bc7f;
+  --color-longfarmblue: #c0e3de;
+  --color-pepper: #232323;
+  --color-whitetrufle: #f2f2f2;
+  --color-platinum: #eaeaea;
+  --color-gray: #bbbbbb;
+  --color-taupegray: #909090;
+
+
+    /* Typography
+  ********************/
+    --base-font-family: 'Averta', 'sans-serif';
+    --base-font-size: 18px;
+    --base-font-weight: 300;
+    --heading-font-family: 'Averta', 'sans-serif';
+    --heading-font-weight: 700;
+
+    /* Layout
+  ********************/
+    --container-width: 1560px;
+    --text-width: 1240px;
+    --grid-section-spacing: 100px;
+    --grid-section-spacing--mobile: calc(var(--grid-section-spacing) / 2);
+    --gutter-width: 100px;
+    --gutter-width--mobile: 35px;
+    --gutter-compensation: calc(var(--gutter-width) * -1);
+    --gutter-compensation--mobile: -20px;
+    --half-gutter-width: calc(var(--gutter-width) * .5);
+    --half-gutter-width--mobile: calc(var(--gutter-width--mobile) * .5);
+    --half-gutter-compensation: calc(var(--half-gutter-width) * -1);
+    --half-gutter-compensation--mobile: calc(var(--half-gutter-width) * -1);
+    --container-spacing--mobile: 20px;
+    --container-spacing: 50px;
+    --move-up-amount: -300px;
+
+    /* Button */
+    --button-border-radius: 50px;
+    --button-border-width: 1px;
+    --button-border-color: transparent;
+    --button-height: 60px;
+    --button-padding: 0 60px;
+    --button-font-weight: 500;
+    --button-font-family: var(--heading-font-family);
+    --button-font-size: 16px;
+
+}
+
+/* Root end */
+

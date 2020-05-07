@@ -1,10 +1,10 @@
-import { InMemoryCache, IntrospectionFragmentMatcher } from 'apollo-cache-inmemory'
-// import { createHttpLink } from "apollo-link-http";
 
-/*const httpLink = createHttpLink({
-  uri:  process.env.API_URL + "/graphql",
-});
-const link = ApolloLink.from([httpLink]);*/
+const postcssCustomMedia = require('postcss-custom-media');
+const postcssImport = require('postcss-import');
+const postcssPresetEnv = require('postcss-preset-env');
+const postcssReporter = require('postcss-reporter');
+const postcssNested = require('postcss-nested');
+const postcssCalc = require('postcss-calc');
 
 export default {
   mode: "spa",
@@ -42,14 +42,12 @@ export default {
    ** Global CSS
    */
   css: [
-    "uikit/dist/css/uikit.min.css",
-    "uikit/dist/css/uikit.css",
-    "@assets/css/main.css"
+    "@assets/css/master.css"
   ],
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [{ src: "~/plugins/uikit.js", ssr: false }],
+  plugins: [],
   /*
    ** Nuxt.js dev-modules
    */
@@ -75,9 +73,32 @@ export default {
    ** Build configuration
    */
   build: {
-    /*
-     ** You can extend webpack config here
-     */
-    extend(config, ctx) {}
-  }
+    extractCSS: true,
+    optimizeCSS: true,
+    postcss: {
+      plugins: [
+        postcssImport(),
+        postcssCustomMedia({
+          importFrom: 'assets/css/_base/_mediaqueries.css',
+        }),
+        postcssPresetEnv({
+          stage: 2, // default stage is 2
+          preserve: false,
+          autoprefixer: {
+            grid: true,
+          },
+          features: {
+            'color-mod-function': { unresolved: 'warn' },
+            'custom-media-queries': {},
+          },
+          browsers: ['>= 5% in DK', 'ie 11'],
+        }),
+        postcssNested(),
+        postcssCalc(),
+        postcssReporter({
+          clearReportedMessages: true,
+        }),
+      ],
+    },
+  },
 };

@@ -1,5 +1,5 @@
 <template>
-  <div>PageHeader Grid component</div>
+  <div>tech Grid component</div>
 </template>
 
 <script>

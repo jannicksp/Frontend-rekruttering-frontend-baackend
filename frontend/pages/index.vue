@@ -5,12 +5,11 @@
       <div class="uk-container uk-container-large">
         <h1>Hello fra frontpage mand!🍆</h1>
       <div v-for="component in article.Dynamic" :key="component.__typename">
-        <h2>{{component.__typename}}</h2>
+        <componentResolver :content="component" />
       </div>
 
-
       <pre>
-      {{article}}
+        {{article}}
 
       </pre>
       </div>
@@ -20,9 +19,13 @@
 </template>
 
 <script>
-import articleQuery from '~/apollo/queries/article/article'
+import articleQuery from '~/apollo/queries/article/article';
+import componentResolver from '~/components/ComponentResolver.vue';
 
 export default {
+  components: {
+    componentResolver,
+  },
   data() {
     return {
       article: {},

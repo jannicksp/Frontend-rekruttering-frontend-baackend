@@ -1,0 +1,33 @@
+/**
+ * Fonts
+ */
+
+ @font-face {
+    font-family: 'Averta';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src:
+        url('/fonts/Averta-Regular.woff2') format('woff2'),
+        url('/fonts/Averta-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Averta';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src:
+        url('/fonts/Averta-Bold.woff2') format('woff2'),
+        url('/fonts/Averta-Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Averta';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src:
+        url('/fonts/Averta-Black.woff2') format('woff2'),
+        url('/fonts/Averta-Black.woff') format('woff');
+}
