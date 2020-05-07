@@ -29,9 +29,9 @@
       "components": [
         "rows.page-header",
         "rows.stack",
-        "rows.teknologi",
-        "rows.kultur",
-        "rows.ansog-jobs",
+        "rows.technology",
+        "rows.culture",
+        "rows.jobs",
         "rows.minitest"
       ]
     },

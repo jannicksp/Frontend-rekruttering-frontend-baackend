@@ -4,9 +4,8 @@
     <div class="uk-section">
       <div class="uk-container uk-container-large">
         <h1>Hello fra frontpage mand!🍆</h1>
-      <div v-for="component in article.dynamic" :key="component.__typename">
+      <div v-for="component in article.Dynamic" :key="component.__typename">
         <h2>{{component.__typename}}</h2>
-        <!-- <component :is="component.__typename"></component> -->
       </div>
 
 

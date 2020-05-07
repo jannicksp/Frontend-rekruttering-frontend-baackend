@@ -1,13 +1,13 @@
 query Articles($id: ID!) {
   article(id: $id) {
     id
-    meta_title
-    meta_description
-    meta_image {
+    MetaTitle
+    MetaDescription
+    MetaImage {
       url
     }
-    dynamic {
-      __typename
+    Dynamic {
+       __typename
       ... on ComponentRowsStack {
         Title
         Content
