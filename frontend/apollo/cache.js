@@ -3,9 +3,11 @@ import { InMemoryCache, IntrospectionFragmentMatcher } from 'apollo-cache-inmemo
 const fragmentMatcher = new IntrospectionFragmentMatcher({
   introspectionQueryResultData: {
     __schema: {
-      types: [], // no types provided
-    },
-  },
-});
+      types: [] // no types provided
+    }
+  }
+})
 
-export default new InMemoryCache({ fragmentMatcher })
+export default new InMemoryCache({
+  fragmentMatcher
+})

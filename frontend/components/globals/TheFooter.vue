@@ -1,19 +1,18 @@
 <template>
   <footer>
     HELLO FROM FOOTER 👞
+    <Logo></Logo>
   </footer>
 </template>
 
 <script>
-import Logo from '~/components/globals/Logo.vue';
+import Logo from '~/components/globals/Logo.vue'
 
 export default {
   components: {
-    Logo,
+    Logo
   }
 }
 </script>
 
-<style>
-
-</style>
+<style></style>

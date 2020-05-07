@@ -1,20 +1,16 @@
 <template>
   <header>
-      <logo/>
-      <nav>Insert nav here</nav>
+    <logo />
+    <nav>Insert nav here</nav>
   </header>
 </template>
 
 <script>
-import Logo from '~/components/globals/Logo.vue';
+import Logo from '~/components/globals/Logo.vue'
 
 export default {
   components: {
-    Logo,
+    Logo
   }
 }
 </script>
-
-<style>
-
-</style>

@@ -1,12 +1,9 @@
 <template>
-<div>
-  <component
-    v-if="component"
-    :is="component"
-    :content="content" />
+  <div>
+    <component :is="component" v-if="component" :content="content" />
   </div>
 </template>
-​
+
 <script>
 const components = {
   PageHeader: () => import('@/components/DynamicComponents/PageHeader'),
@@ -14,30 +11,29 @@ const components = {
   Technology: () => import('@/components/DynamicComponents/Technology'),
   Minitest: () => import('@/components/DynamicComponents/Minitest'),
   Culture: () => import('@/components/DynamicComponents/Culture'),
-  Jobs: () => import('@/components/DynamicComponents/Jobs'),
-};
+  Jobs: () => import('@/components/DynamicComponents/Jobs')
+}
 export default {
   components,
   props: {
-      content: {
-        type: Object,
-        default: function () {
-          return {}
-        }
-      },
+    content: {
+      type: Object,
+      default() {
+        return {}
+      }
+    }
   },
   computed: {
     component() {
       if (components[this.componentName]) {
-        return this.componentName;
+        return this.componentName
       }
 
-      console.error('component was not found');
-      return false;
+      return false
     },
-    componentName(){
-      return this.content.__typename.replace('ComponentRows','');
-    },
-  },
-};
+    componentName() {
+      return this.content.__typename.replace('ComponentRows', '')
+    }
+  }
+}
 </script>

@@ -1,17 +1,18 @@
 {
   "name": "frontend",
   "version": "1.0.0",
-  "description": "My polished Nuxt.js project",
-  "author": "You",
+  "description": "Novicell recruitment page",
+  "author": "Jannick Pedersen<jap@novicell.dk>",
   "private": true,
   "scripts": {
     "develop": "cross-env API_URL=http://localhost:1337 nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore . --fix"
   },
   "dependencies": {
-    "@nuxtjs/apollo": "^4.0.0-rc17",
+    "@nuxtjs/apollo": "^4.0.0-rc19",
     "@nuxtjs/markdownit": "^1.2.7",
     "cross-env": "^7.0.2",
     "dotenv": "^8.2.0",
@@ -25,9 +26,21 @@
     "postcss-nested": "^4.2.1",
     "postcss-preset-env": "^6.7.0",
     "postcss-reporter": "^6.0.1"
+
   },
   "devDependencies": {
-    "apollo-cache-inmemory": "^1.6.5"
+    "apollo-cache-inmemory": "^1.6.5",
+    "@nuxtjs/eslint-config": "^2.0.0",
+    "@nuxtjs/eslint-module": "^1.0.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^6.1.0",
+    "eslint-plugin-nuxt": ">=0.4.2",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "prettier": "^1.19.1",
+    "lint-staged": "^10.0.0",
+    "@nuxtjs/stylelint-module": "^3.1.0",
+    "stylelint": "^10.1.0"
   },
   "license": "MIT"
 }
