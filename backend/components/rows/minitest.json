@@ -1,8 +1,8 @@
 {
-  "collectionName": "components_rows_page_headers",
+  "collectionName": "components_rows_minitests",
   "info": {
-    "name": "Page Header",
-    "icon": "smile-wink"
+    "name": "Minitest",
+    "icon": "exchange-alt"
   },
   "options": {},
   "attributes": {

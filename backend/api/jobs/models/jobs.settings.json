@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "jobs",
+  "info": {
+    "name": "job"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Image": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "Link": {
+      "type": "string",
+      "default": "https://"
+    },
+    "Department": {
+      "type": "enumeration",
+      "enum": [
+        "Aarhus",
+        "Barcelona",
+        "Copenhagen",
+        "Ebeltoft",
+        "London",
+        "Oslo"
+      ],
+      "default": "Aarhus",
+      "required": true
+    },
+    "Active": {
+      "type": "boolean",
+      "default": true
+    },
+    "Content": {
+      "type": "text",
+      "required": true,
+      "maxLength": 300
+    }
+  }
+}

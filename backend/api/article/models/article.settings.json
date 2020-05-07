@@ -10,33 +10,37 @@
     "timestamps": true
   },
   "attributes": {
-    "meta_title": {
+    "MetaTitle": {
       "type": "string",
       "required": true
     },
-    "meta_image": {
+    "MetaImage": {
       "model": "file",
       "via": "related",
       "plugin": "upload",
       "required": true
     },
-    "published_at": {
+    "PublishedAt": {
       "type": "date",
       "required": true
     },
-    "dynamic": {
+    "Dynamic": {
       "type": "dynamiczone",
       "components": [
         "rows.page-header",
-        "rows.stack"
+        "rows.stack",
+        "rows.teknologi",
+        "rows.kultur",
+        "rows.ansog-jobs",
+        "rows.minitest"
       ]
     },
-    "meta_description": {
+    "MetaDescription": {
       "type": "text",
       "required": true,
       "maxLength": 160
     },
-    "title": {
+    "PageTitle": {
       "type": "string",
       "private": true,
       "required": true,

@@ -1,0 +1,9 @@
+query Jobs($id: ID!) {
+  job(id: $id) {
+    id
+
+    Image {
+      url
+    }
+  }
+}
